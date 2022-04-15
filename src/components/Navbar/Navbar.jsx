@@ -4,26 +4,27 @@ import style from "../Navbar/navbar.module.css"
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Resume from "../../Resume/resume.pdf";
+import Resume from "../../Resume/resume.pdf"
 
 
 function Navbar() {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [burger, setBurger] = React.useState(true);
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  // const handleClick = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
   const handleClose = () => {
     setAnchorEl(null);
+    setBurger(true)
   };
 
   return (
     <div className={style.navbarDiv}  >
-      {/* <span className={style.Laxmi}>Laxmi Dutta</span> */}
-    <img className={style.logo} src="https://i.ibb.co/5FPbQnn/Black-Ivory-Botanic-Circle-Brand-Name-Initial-Monogram-Badge-Logo.png" alt="logo" height={"55px"} />
+    <img className={style.logo} src="https://i.ibb.co/6s4wL75/KING-royal-logo-typography.png" alt="logo" height={"45px"} />
     <div className={style.linkDiv} >
-      <Link className={style.links} to={"/"} >Home</Link>
+      <a className={style.links} href="#top" >Home</a>
       <a className={style.links} href="#top" >About</a>
       <a className={style.links} href="#skill" >Skills</a>
       <a className={style.links} href="#project" >Projects</a>
@@ -37,9 +38,15 @@ function Navbar() {
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
+        onClick={(event) => {
+          setAnchorEl(event.currentTarget);
+          setBurger(!burger)
+        } }
       >
-        Home
+        {
+          burger ?  <img  className={style.menuIcon} src='https://i.ibb.co/Y2H7jpg/icons8-menu-rounded-50.png' height={"30px"} /> : <img  className={style.menuIcon} src='https://i.ibb.co/T8X6nd0/icons8-cancel-64.png' height={"30px"} />
+        }
+       
       </Button>
       <Menu
         id="basic-menu"

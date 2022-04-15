@@ -162,6 +162,9 @@
     border: 1px solid white;
 
 }
+/* .img_project{
+    width:300px
+} */
 
 .paraofrole{
     margin-top: -10px;
@@ -172,6 +175,10 @@
     display: flex;
     height: 320px;
     /* color:black; */
+}
+.cardMain>div:nth-child(2n){
+   /* background-color:yellow; */
+   width:1000px
 }
 
 .techStack{

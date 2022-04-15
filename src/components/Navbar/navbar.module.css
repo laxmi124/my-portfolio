@@ -1,25 +1,18 @@
 .navbarDiv{
     background-color: rgb(10,25,47);
     height: 70px;
-    position:fixed;
-    width:100%;
-    z-index: 2;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
-.Laxmi{
-    font-family: 'Beau Rivage', cursive;
-    font-size: 7vh;
-    font-weight: bold;
-    margin-left:2vh;
-    letter-spacing: 7px;
-    word-spacing: 30px;
-}
 .logo{
     position: relative;
     left: 25px;
     top: 12px;
     cursor: pointer;
-    width:90px;
+    width:70px;
+    
 }
 
 .linkDiv{
@@ -62,10 +55,12 @@
 .dropmenu{
     text-decoration: none;
     color: #0A192F;
+     
 }
 
 .dropmenu img {
     margin-right: 10px;
+
 }
 
 @media screen and (max-width : 750px){
@@ -77,8 +72,36 @@
     .dropMenu{
         display: block;
         position: absolute;
-        right: 20px;
+        right: 30px;
         top: 17px;
+    }
+
+    .menuIcon{
+        position: relative;
+        top: -2px;
+        right: -12px;
+        
+    }
+
+}
+
+
+@media screen and (max-width : 450px){
+
+    .navbarDiv{
+        background-color: rgb(10,25,47);
+        height: 75px;
+    }
+    
+    .logo{
+        left: 25px;
+        top: 22px;
+        height: 32px;
+    }
+
+    .dropMenu{
+        top: 19px;
+
     }
 
 }

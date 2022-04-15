@@ -11,8 +11,8 @@ import Resume from "../../Resume/resume.pdf";
 import Footer from "../Footer/Footer";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import profile from 'file:///C:/Users/sdutt/Desktop/portfolio/portfolio/src/components/Home/portfolio_profile_picture.png'
-import imdb_project from 'file:///C:/Users/sdutt/Desktop/portfolio/portfolio/src/components/Home/imdb_project.png'
+// import profile from 'file:///C:/Users/sdutt/Desktop/portfolio/portfolio/src/components/Home/portfolio_profile_picture.png'
+// import imdb_project from 'file:///C:/Users/sdutt/Desktop/portfolio/portfolio/src/components/Home/imdb_project.png'
 
 function Home() {
   const [linkedin, setLinkedin] = useState(false);
@@ -103,7 +103,7 @@ function Home() {
         <div>
           <img
             className={style.profileImg}
-            src={profile}
+            src="https://i.ibb.co/b3tJ6Sj/portfolio-profile-picture.png"
             alt="profile"
             height={"350px"}
             // width={"130px"}
@@ -180,7 +180,7 @@ function Home() {
             <CardMedia
               component="img"
               height="320"
-              image={imdb_project}
+              image="https://i.ibb.co/qd8DFJb/imdb-project.png"
               alt="green iguana"
             />
             <CardContent>
@@ -234,6 +234,75 @@ function Home() {
               </Button>
               </a>
               <a className={style.anchorLink}  href="https://imdb-niftyfifty.netlify.app/" target="_blank" >
+              <Button
+                size="small"
+              >
+                <img
+                  src="https://i.ibb.co/VBNMWVp/icons8-launch-50.png"
+                  alt=""
+                  height={"25px"}
+                />
+                LAUNCH
+              </Button>
+              </a>
+            </CardActions>
+          </Card>
+          <Card sx={{ maxWidth: 3000 }} className={style.cardMain} data-aos="fade-up" >
+            <CardMedia
+              component="img"
+              height="320"
+              image="https://i.ibb.co/jL2LzGz/fabbag.png"
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                fabbag Clone
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                <p>
+                FAbbag is a website where users can find there skincare and beauty
+                products easiy.
+                </p>
+                <p>
+                A collaborative project built by a team of 2, executed in 6 days.
+                </p>
+                <h4>Role and responsibilities:-</h4>
+                <p>
+                  <img
+                    src="https://i.ibb.co/hDczqkk/icons8-arrow-48.png"
+                    alt=""
+                    height={"12px"}
+                  />{" "}
+                  Home page,search bar, navbar.
+                </p>
+                {/* <p className={style.paraofrole}>
+                  <img
+                    src="https://i.ibb.co/hDczqkk/icons8-arrow-48.png"
+                    alt=""
+                    height={"12px"}
+                  />{" "}
+                  Functionalities: User authentication along.
+                </p> */}
+                <p className={style.techStack}>
+                  <b>Tech Stack</b> : HTML | CSS | JavaScript | Local storage
+                </p>
+              </Typography>
+            </CardContent>
+            <CardActions className={style.gobtns}>
+              <a className={style.anchorLink}  href="https://github.com/laxmi124/fab_bag.git" target="_blank" >
+              <Button
+                className={style.gitlaunchbtn}
+                size="small"
+              >
+                <img
+                  src="https://github.com/laxmi124/fab_bag.git"
+                  alt=""
+                  height={"25px"}
+                />
+                CODE
+              </Button>
+              </a>
+              <a className={style.anchorLink}  href="https://fabbag-construct.netlify.app/" target="_blank" >
               <Button
                 size="small"
               >
